@@ -1,5 +1,6 @@
 # Account Use and Management
-
+| Event Log | Level | ID | Error Name | Source |
+| --- | --- | --- | --- | --- | 
 | Security | Informational | 4740 | Account Lockouts | Microsoft-Windows-Security-Auditing |
 | Security | Informational | 4728, 4732, 4756 | User Added to Privileged Group | Microsoft-Windows-Security-Auditing |
 | Security | Informational | 4735 | Security-Enabled Group Modification | Microsoft-Windows-Security-Auditing |
@@ -8,13 +9,15 @@
 | Security | Informational | 4648 | Account Login with Explicit Credentials | Microsoft-Windows-Security-Auditing |
 
 # Event Logs and Audit Policy
-
+| Event Log | Level | ID | Error Name | Source |
+| --- | --- | --- | --- | --- | 
 | System | Informational | 104 | Event Log was Cleared | Microsoft-Windows-EventLog |
 | Security | Informational | 102 | Audit Log was Cleared | Microsoft-Windows-EventLog |
 | System | Informational | 4719 | System audit policy was changed | Microsoft-Windows-EventLog |
 
 # Group Policy and Windows Firewall
-
+| Event Log | Level | ID | Error Name | Source |
+| --- | --- | --- | --- | --- | 
 | System | Error | 1125 | Internal Error | Microsoft-Windows-GroupPolicy |
 | System | Error | 1127 | Generic Internal Error | Microsoft-Windows-GroupPolicy |
 | System | Error | 1129 | Group Policy Application Failed due to Connectivity | Microsoft-Windows-GroupPolicy |
