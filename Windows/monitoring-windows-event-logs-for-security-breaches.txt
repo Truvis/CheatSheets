@@ -1,6 +1,0 @@
-Security | Informational | 4740 | Account Lockouts | Microsoft-Windows-Security-Auditing
-Security | Informational | 4728, 4732, 4756 | User Added to Privileged Group | Microsoft-Windows-Security-Auditing
-Security | Informational | 4735 | Security-Enabled Group Modification | Microsoft-Windows-Security-Auditing
-Security | Informational | 4724 | Successful User Account Login | Microsoft-Windows-Security-Auditing
-Security | Informational | 4625 | Failed User Account Login | Microsoft-Windows-Security-Auditing
-Security | Informational | 4648 | Account Login with Explicit Credentials | Microsoft-Windows-Security-Auditing
