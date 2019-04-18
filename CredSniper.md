@@ -8,7 +8,7 @@
 
 Window 1:
 (run)
-certbot -d microsoftcenter.net --manual --preferred-challenges http certonly
+certbot -d domain.tld --manual --preferred-challenges http certonly
 (wait)
 (do window 2)
 
@@ -25,7 +25,7 @@ Move new certs to
 
 - mv  /etc/letsencrypt/live/{domain}.tld/fullchain.pem CredSniper/certs/{domain}.tld.cert.pem
 
-python credsniper.py --module ligins --port 443 --ssl --verbose --final https://login.microsoftonline.com --hostname 0ffice365online.com
+python credsniper.py --module {name} --port 443 --ssl --verbose --final https://login.microsoftonline.com --hostname domain.tld
 
 ## Template Building
 
