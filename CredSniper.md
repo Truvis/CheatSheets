@@ -70,6 +70,5 @@ holds the logged creds that are entered on the website.
 
 
 ## Run the site 
-- ~/$ cd CredSniper
 - CredSniper$ source bin/activate
 - (CredSniper) ~/CredSniper$ redsniper.py --module {NAME} --port 443 --ssl --verbose --final {REDIRECT TO} --hostname {DOMAIN}
