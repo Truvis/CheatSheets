@@ -8,7 +8,7 @@
 | 7	| Unlock | This workstation was unlocked.
 | 8	| NetworkCleartext | A user logged on to this computer from the network. The user’s password was passed to the authentication package in its unhashed form. The built-in authentication packages all hash credentials before sending them across the network. The credentials do not traverse the network in plaintext (also called cleartext).
 
-# Event IDs
+# Common Security Event Related IDs
 | Event ID (2000/XP/2003) | Event ID (Vista/7/8/2008/2012) | Description | Log Name
 | - | - | - | - |
 | 528 | 4624 | Successful Logon | Security
