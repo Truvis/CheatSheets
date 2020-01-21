@@ -1,4 +1,15 @@
-# Windows 2000/XP and Windows Server 2003
+# Logon Type Codes
+| Logon type | Logon title | Description
+| - | - | - |
+| 2	| Interactive | A user logged on to this computer.
+| 3	| Network | A user or computer logged on to this computer from the network.
+| 4	| Batch	| Batch logon type is used by batch servers, where processes may be executing on behalf of a user without their direct intervention.
+| 5	| Service | A service was started by the Service Control Manager.
+| 7	| Unlock | This workstation was unlocked.
+| 8	| NetworkCleartext | A user logged on to this computer from the network. The user’s password was passed to the authentication package in its unhashed form. The built-in authentication packages all hash credentials before sending them across the network. The credentials do not traverse the network in plaintext (also called cleartext).
+
+# Event Log IDs
+## Windows 2000/XP and Windows Server 2003
 + [512](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=512) – Windows NT is starting up
 + [513](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=513) – Windows is shutting down
 + [514](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=514) – An authentication package has been loaded by the Local Security Authority
@@ -152,7 +163,7 @@
 + [860](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=860) – The Windows Firewall has switched the active policy profile
 + [861](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=861) – The Windows Firewall has detected an application listening for incoming traffic
 
-# Windows 7/Vista/8/10, Windows Server 2008/2012R2/2016/2019
+## Windows 7/Vista/8/10, Windows Server 2008/2012R2/2016/2019
 + [1100](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=1100) – The event logging service has shut down
 + [1101](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=1101) – Audit events have been dropped by the transport.
 + [1102](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=1102) – The audit log was cleared
