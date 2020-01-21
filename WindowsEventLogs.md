@@ -22,6 +22,11 @@
 | 2949 | 7045 | Service Creation | System
 
 # Event Log IDs
+## Link Legend
++ MS = Microsoft Official
++ ME = Manage Engine
++ UWS = Ultimate Windows Security
+
 ## Windows 2000/XP and Windows Server 2003
 + [512] [MS](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-512) [ME](https://www.manageengine.com/products/active-directory-audit/kb/windows-security-log-event-id-512.html) [UWS](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=512) – Windows NT is starting up
 + [513] [MS](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-513) [ME](https://www.manageengine.com/products/active-directory-audit/kb/windows-security-log-event-id-513.html) [UWS](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=513) – Windows is shutting down
