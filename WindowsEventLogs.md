@@ -8,6 +8,19 @@
 | 7	| Unlock | This workstation was unlocked.
 | 8	| NetworkCleartext | A user logged on to this computer from the network. The user’s password was passed to the authentication package in its unhashed form. The built-in authentication packages all hash credentials before sending them across the network. The credentials do not traverse the network in plaintext (also called cleartext).
 
+# Event IDs
+| Event ID (2000/XP/2003) | Event ID (Vista/7/8/2008/2012) | Description | Log Name
+| - | - | - | - |
+| 528 | 4624 | Successful Logon | Security
+| 529 | 4625 | Failed Login | Security
+| 680 | 4776 | Successful /Failed Account Authentication | Security
+| 624 | 4720 | A user account was created | Security
+| 636 | 4732 | A member was added to a security-enabled local group | Security
+| 632 | 4728 | A member was added to a security-enabled global group | Security
+| 2934 | 7030 | Service Creation Errors | System
+| 2944 | 7040 | The start type of the IPSEC Services service was changed from disabled to auto start. | System
+| 2949 | 7045 | Service Creation | System
+
 # Event Log IDs
 ## Windows 2000/XP and Windows Server 2003
 + [512](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=512) – Windows NT is starting up
