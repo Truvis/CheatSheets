@@ -1,8 +1,6 @@
 Windows 2000/XP and Windows Server 2003
 [512](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=512) – Windows NT is starting up
-
 [513](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=513) – Windows is shutting down
-
 [514](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=514) – An authentication package has been loaded by the Local Security Authority
 [515](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=515) – A trusted logon process has registered with the Local Security Authority
 [516](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=516) – Internal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits
