@@ -58,7 +58,7 @@ HISTFILE
 
 ```console
 echo $HISTFILE
-/home/bad3r/.bash_history
+/home/meow/.bash_history
 To avoid recording commands to the file in $HISTFILE set HISTFILE value to /dev/null
 ```
 ```console
@@ -164,3 +164,6 @@ Then, to make certain the changes are written to disk, we need to tell the histo
 history -w
 ```
 This only clears the history of the current shell. Commands run in other shells will remain on disk.
+
+REFS
+https://secbytes.net/Hiding-Your-Tracks-Bash-History/
