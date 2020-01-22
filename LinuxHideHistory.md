@@ -1,3 +1,4 @@
+# Clearing Linux Command History
 ## Bash history
 Bash maintains the list of commands internally in memory while it’s running. They are written into $HISTFILE (i.e, ~/.bash_history) when a user logs off.
 
@@ -165,5 +166,5 @@ history -w
 ```
 This only clears the history of the current shell. Commands run in other shells will remain on disk.
 
-REFS
+# REFS
 https://secbytes.net/Hiding-Your-Tracks-Bash-History/
