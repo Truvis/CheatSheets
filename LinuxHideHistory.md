@@ -166,5 +166,5 @@ history -w
 ```
 This only clears the history of the current shell. Commands run in other shells will remain on disk.
 
-# REFS
+# REFS / Further Readings
 https://secbytes.net/Hiding-Your-Tracks-Bash-History/
