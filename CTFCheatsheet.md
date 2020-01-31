@@ -1,3 +1,42 @@
+# Discover / Port Scanning
+
+## Nmap
+	nmap -sP/-sn 192.168.1.0/24
+	
+	nmap [Scan Type] [Options] {target specification}
+
+	HOST DISCOVERY:
+	-sL: List Scan - simply list targets to scan
+	-sn/-sP: Ping Scan - disable port scan
+	-Pn: Treat all hosts as online -- skip host discovery
+
+	SCAN TECHNIQUES:
+	-sS/sT/sA/sW/sM: TCP SYN/Connect()/ACK/Window/Maimon scans
+	-sU: UDP Scan -sN/sF/sX: TCP Null, FIN, and Xmas scans
+
+	PORT SPECIFICATION:
+	-p : Only scan specified ports
+	Ex: -p22; -p1-65535; -p U:53,111,137,T:21-25,80,139,8080,S:9
+	
+## Netcat
+### TCP
+	nc -vvn -z xxx.xxx.xxx.xxx startport-endport
+
+	   -z flag is Zero-I/O mode (used for scanning)
+	   -vv will provide verbose information about the results
+	   -n flag allows to skip the DNS lookup
+### UDP
+	   nc -vvn -u -z xxx.xxx.xxx.xxx startport-endport
+
+SERVICE/VERSION DETECTION:
+-sV: Probe open ports to determine service/version info
+
+OUTPUT:
+-oN/-oX/-oS/-oG : Output scan in normal, XML,Output in the three major formats at once
+-v: Increase verbosity level (use -vv or more for greater effect)
+
+MISC: -6: Enable IPv6 scanning -A: Enable OS detection, version detection, script scanning, and traceroute
+
 # Linux Privilege Escalation
 
 Spawning shell/break restricted shell
@@ -334,3 +373,9 @@ Check for ASLR
 	With binary (run multiple times and see if address changes)
 	
 	ldd overflow | grep libc
+
+
+## REFS
+=> https://bitvijays.github.io/LFC-VulnerableMachines.html
+=> https://legacy.gitbook.com/book/d00mfist1/ctf/details
+=> https://percussiveelbow.github.io/linux-privesc/
