@@ -35,3 +35,20 @@ In some environments snmpd not have permission for read file /sys/devices/virtua
 1. Get-WindowsCapability -Online -Name "SNMP*"
 2. Get-WindowsCapability -Online -Name "SNMP*"
 3. Add-WindowsCapability -Online -Name "SNMP.Client~~~~0.0.1.0"
+
+## ESXI 5.5
+1. esxcli system snmp set --communities YOUR_STRING
+2. esxcli system snmp set --enable true
+3. esxcli network firewall ruleset set --ruleset-id snmp --allowed-all true
+4. esxcli network firewall ruleset set --ruleset-id snmp --enabled true
+5. /etc/init.d/snmpd restart
+
+## ESXI 6.x
+1. esxcli system snmp set -r
+2. esxcli system snmp set -c YOUR_STRING
+3. esxcli system snmp set -p 161
+4. esxcli system snmp set -L "City, State, Country"
+5. esxcli system snmp set -C noc@example.com
+6. esxcli system snmp set -e yes
+
+
