@@ -30,3 +30,8 @@ In some environments snmpd not have permission for read file /sys/devices/virtua
 7. Right-click on SNMP Service and click on Properties.
 8. Click on the Security tab. 
 9. Type your randomized 8 - 10 character connection string. Be sure to make it Read Only, not Read Write.
+
+## Windows 10 1809+ 
+1. Get-WindowsCapability -Online -Name "SNMP*"
+2. Get-WindowsCapability -Online -Name "SNMP*"
+3. Add-WindowsCapability -Online -Name "SNMP.Client~~~~0.0.1.0"
