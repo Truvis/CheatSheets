@@ -13,14 +13,14 @@ PS C:\Users\Administrator> Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSe
 ##### enable NTP Server feature
 PS C:\Users\Administrator> Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\NtpServer" -Name "Enabled" -Value 1 
 
-# set [AnnounceFlags] to 5
+- set [AnnounceFlags] to 5
 - number means
 - 0x00 : Not a time server
 - 0x01 : Always time server
 - 0x02 : Automatic time server
 - 0x04 : Always reliable time server
 - 0x08 : Automatic reliable time server
-PS C:\Users\Administrator> Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\services\W32Time\Config" -Name "AnnounceFlags" -Value 5 
+- PS C:\Users\Administrator> Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\services\W32Time\Config" -Name "AnnounceFlags" -Value 5 
 
 ##### restart Windows Time service
 PS C:\Users\Administrator> Restart-Service w32Time 
