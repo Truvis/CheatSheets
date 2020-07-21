@@ -7,25 +7,25 @@
 7. set dhcp to set local ntp server as the time server
 
 
-# confirm current setting (follows are default settings)
+##### confirm current setting (follows are default settings)
 PS C:\Users\Administrator> Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\NtpServer" 
 
-# enable NTP Server feature
+##### enable NTP Server feature
 PS C:\Users\Administrator> Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\NtpServer" -Name "Enabled" -Value 1 
 
 # set [AnnounceFlags] to 5
-# number means
-# 0x00 : Not a time server
-# 0x01 : Always time server
-# 0x02 : Automatic time server
-# 0x04 : Always reliable time server
-# 0x08 : Automatic reliable time server
+- number means
+- 0x00 : Not a time server
+- 0x01 : Always time server
+- 0x02 : Automatic time server
+- 0x04 : Always reliable time server
+- 0x08 : Automatic reliable time server
 PS C:\Users\Administrator> Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\services\W32Time\Config" -Name "AnnounceFlags" -Value 5 
 
-# restart Windows Time service
+##### restart Windows Time service
 PS C:\Users\Administrator> Restart-Service w32Time 
 
-# if Windows Firewall is running, allow NTP port
+##### if Windows Firewall is running, allow NTP port
 PS C:\Users\Administrator> New-NetFirewallRule `
 -Name "NTP Server Port" `
 -DisplayName "NTP Server Port" `
