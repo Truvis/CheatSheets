@@ -1,4 +1,5 @@
-```C:\Windows\System32>nslookup -q=TXT _netblocks.google.com
+```
+C:\Windows\System32>nslookup -q=TXT _netblocks.google.com
 Server:  commandsoc.domain.local
 Address:  192.168.2.15
 
