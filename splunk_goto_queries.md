@@ -14,4 +14,7 @@
 - index=main sourcetype="opnsense:filterlog"  src_ip="192.168.*" | stats  count(bytes) as TotalBytes by src_ip
 
 ##### Search by country and region for stats (graphable)
-- host="edge.internal.truvis.cat" dest_ip="96.58.127.84" action=* | iplocation src_ip | search Country = China | stats count by Country, Region, action
+- host="{FIREWALL}" dest_ip="96.58.127.84" action=* | iplocation src_ip | search Country = China | stats count by Country, Region, action
+
+##### out going to countries from internal
+- host="{FIREWALL}" src_ip="192.168.*" action=* | iplocation dest_ip | search Country = * | stats count by Country
