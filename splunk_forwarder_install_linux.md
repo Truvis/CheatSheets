@@ -7,7 +7,7 @@
 - splunk enable boot-start 
 - cd $SPLUNK_HOME/bin ./splunk start
 - vi $SPLUNK_HOME/etc/system/local/inputs.conf
-- [monitor:///var/log/.*log]
+- [monitor:///var/log/]
 - ./splunk add forward-server host:9997
 - splunk restart
 
