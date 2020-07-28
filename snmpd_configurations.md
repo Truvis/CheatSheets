@@ -2,9 +2,9 @@
 
 ## CentOS 7
 - /usr/lib/systemd/system/snmpd.service
+- Environment=OPTIONS="-LS0-4d"
 - systemctl daemon-reload
 - systemctl restart snmpd
-- Environment=OPTIONS="-LS0-4d"
 
 ## CentOS 6
 - /etc/sysconfig/snmpd
