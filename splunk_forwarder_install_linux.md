@@ -8,7 +8,7 @@
 - cd $SPLUNK_HOME/bin ./splunk start
 - vi $SPLUNK_HOME/etc/system/local/inputs.conf
 - [monitor:///var/log]
-- ./splunk add forward-server <host name or ip address>:<listening port>
+- ./splunk add forward-server host:9997
 - splunk restart
 
 REFS:
