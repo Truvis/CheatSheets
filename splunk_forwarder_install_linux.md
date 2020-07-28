@@ -12,5 +12,5 @@
 - splunk restart
 
 REFS:
-- [https://medium.com/@devopsprosiva/splunk-install-linux-universal-forwarder-3e115d51e751][https://medium.com/@devopsprosiva/splunk-install-linux-universal-forwarder-3e115d51e751]
-- [https://docs.splunk.com/Documentation/Splunk/8.0.5/AddASAsingle/InstallUF][https://docs.splunk.com/Documentation/Splunk/8.0.5/AddASAsingle/InstallUF]
+- [https://medium.com/@devopsprosiva/splunk-install-linux-universal-forwarder-3e115d51e751]
+- [https://docs.splunk.com/Documentation/Splunk/8.0.5/AddASAsingle/InstallUF]
