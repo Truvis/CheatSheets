@@ -4,7 +4,7 @@
 ### CentOS 7 Install
 - yum install net-snmp
 - systemctl enable snmpd
--systemctl start snmpd
+- systemctl start snmpd
 
 ## Service Setup
 - curl -o /usr/local/bin/distro https://gitlab.com/observium/distroscript/raw/master/distro
