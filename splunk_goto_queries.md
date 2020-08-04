@@ -50,6 +50,18 @@
 #### Timechart of the status of an Locked Out Account
 - 	sourcetype="WinEventLog:Security" EventCode=4625 AND Status=0xC0000234 | timechart count by user | sort -count
 
+#### Failed Logon Attempts – Windows
+- source="WinEventLog:security" EventCode=4625 | timechart span=1h count by host
+- source="WinEventLog:security" EventCode=4625 | eval Workstation_Name=lower(Workstation_Name) | eval host=lower(host) | eval hammer=_time | bucket span=5m hammer | stats count sparkline by user host, hammer, Workstation_Name | rename hammer as "5 minute blocks" host as "Target Host" Workstation_Name as "Source Host" | convert ctime("5 minute blocks")
+
+#### Failed Attempt to Login to a Disabled Account
+- source="WinEventLog:security" EventCode=4625 (Sub_Status="0xc0000072" OR Sub_Status="0xC0000072") Security_ID!="NULL SID" Account_Name!="*$" | eval Date=strftime(_time, "%Y/%m/%d")| rex "Which\sLogon\sFailed:\s+\S+\s\S+\s+\S+\s+Account\sName:\s+(?<facct>\S+)" | eval Date=strftime(_time, "%Y/%m/%d") | stats count by Date, facct, host, Keywords | rename facct as "Target Account" host as "Host" Keywords as "Status" count as "Count"
+ 
+ #### User Logon / Session Duration
+ - source=WinEventLog:Security (EventCode=4624 OR EventCode=4634) (Logon_Type=2 OR Logon_Type=10) | eval Date=strftime(_time, "%Y/%m/%d")| eval LogonType=case(Logon_Type="2", "Local Console Access", Logon_Type="10", "Remote Desktop via Terminal Services")| transaction host user startswith=EventCode=4624 endswith=EventCode=4634 | where duration > 5 | eval duration = duration/60 | eval duration=round(duration,2)| table host, user, LogonType duration, Date | rename duration as "Session Duration in Minutes" | sort - date
+ 
+ #### Successful Logons – Windows
+ - source="WinEventLog:security" EventCode=4624 Logon_Type IN (2,7,10,11) NOT user IN ("DWM-*", "UMFD-*") | eval Workstation_Name=lower(Workstation_Name) | eval host=lower(host) | eval hammer=_time  | bucket span=12h hammer  | stats values(Logon_Type) as "Logon Type" count sparkline by user host, hammer, Workstation_Name | rename hammer as "12 hour blocks" host as "Target Host" Workstation_Name as "Source Host" | convert ctime("12 hour blocks") | sort - "12 hour blocks"
 
 ### REFS:
 - https://docs.splunksecurityessentials.com/content-detail/sser_malicious_command_line_executions/ (contains good queries all around)
