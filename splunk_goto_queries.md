@@ -22,6 +22,8 @@
 #### events pre hour BY sourctype
 - sourcetype="WinEventLog:Security" | bin _time span=1h | eval date_hour=strftime(_time, "%H") | stats count AS hits first(date_hour) AS date_hour BY _time | stats avg(hits) BY date_hour
 
+#### eventsper hour by Windows EventLogs
+- sourcetype="WinEventLog:Security" EventCode=4673 | timechart span=1h count by host
 
 ### REFS:
 - https://docs.splunksecurityessentials.com/content-detail/sser_malicious_command_line_executions/ (contains good queries all around)
