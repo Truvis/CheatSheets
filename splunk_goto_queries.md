@@ -22,3 +22,4 @@
 
 ### REFS:
 - https://docs.splunksecurityessentials.com/content-detail/sser_malicious_command_line_executions/ (contains good queries all around)
+- https://www.sans.org/reading-room/whitepapers/critical/finding-bad-splunk-37482
