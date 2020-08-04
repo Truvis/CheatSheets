@@ -15,3 +15,4 @@
 - https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor
 - https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/audit-policy-recommendations
 - https://malwarearchaeology.squarespace.com/cheat-sheets
+- https://docs.splunk.com/Documentation/Splunk/latest/Data/MonitorfilesystemchangesonWindows
