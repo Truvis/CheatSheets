@@ -18,3 +18,7 @@
 
 ##### out going to countries from internal
 - host="{FIREWALL}" src_ip="192.168.*" action=* | iplocation dest_ip | search Country = * | stats count by Country
+
+
+### REFS:
+- https://docs.splunksecurityessentials.com/content-detail/sser_malicious_command_line_executions/ (contains good queries all around)
