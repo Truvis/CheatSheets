@@ -27,6 +27,9 @@
 
 #### events per hour by windows EventLogs BY EVENT TYPE
  - sourcetype="WinEventLog:Security" | timechart span=1h count by EventCode
+ 
+#### Event Log clears in windows
+- index=* (source="WinEventLog:Security" AND (EventCode=1102 OR EventCode=1100)) OR ((source="WinEventLog:System") AND EventCode=104) | stats count BY _time EventCode sourcetype host
 
 ### REFS:
 - https://docs.splunksecurityessentials.com/content-detail/sser_malicious_command_line_executions/ (contains good queries all around)
