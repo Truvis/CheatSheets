@@ -50,13 +50,7 @@ index = osnixbash
 disabled = 0
 ```
 
-NOTES:
-- index the collection name (becomes a name which is searchable within splunk)
-- source is the name/file/stream/output like /var/log/messages (becomes a name which is searchable within splunk)
-- sourcetype is the type like linux_syslog (becomes a name which is searchable within splunk)
 
-- Searching index=a and sourcetype=b is like searching a.b
-- It's best to always use both when possible to increase searching speed. 
 
 REFS:
 - https://medium.com/@devopsprosiva/splunk-install-linux-universal-forwarder-3e115d51e751
