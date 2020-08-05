@@ -16,6 +16,37 @@ Add blacklist to not forward certain files.
 - blacklist = pihole*
 - blacklist = access*
 
+### inputs.conf
+[monitor:///var/log]
+whitelist=(log$|messages|mesg$|cron$|acpid$|\.out)
+blacklist=(\.gz$|\.zip$|\.bz2$|auth\.log|lastlog|secure|anaconda\.syslog)
+index=osnix
+sourcetype=syslog
+disabled = 0
+
+[monitor:///var/log/secure]
+blacklist=(\.gz$|\.zip$|\.bz2$)
+index=osnixsec
+sourcetype=syslog
+source=secure
+disabled = 0
+
+[monitor:///var/log/auth.log*]
+blacklist=(\.gz$|\.zip$|\.bz2$)
+index=osnixsec
+sourcetype=syslog
+disabled = 0
+
+[monitor:///root/.bash_history]
+sourcetype = bash_history
+index = osnixbash
+disabled = 0
+
+[monitor:///home/.../.bash_history]
+sourcetype = bash_history
+index = osnixbash
+disabled = 0
+
 REFS:
 - https://medium.com/@devopsprosiva/splunk-install-linux-universal-forwarder-3e115d51e751
 - https://docs.splunk.com/Documentation/Splunk/8.0.5/AddASAsingle/InstallUF
