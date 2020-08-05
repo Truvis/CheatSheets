@@ -17,7 +17,7 @@ Add blacklist to not forward certain files.
 - blacklist = access*
 
 ### inputs.conf
-[monitor:///var/log]
+```[monitor:///var/log]
 whitelist=(log$|messages|mesg$|cron$|acpid$|\.out)
 blacklist=(\.gz$|\.zip$|\.bz2$|auth\.log|lastlog|secure|anaconda\.syslog)
 index=osnix
@@ -45,7 +45,7 @@ disabled = 0
 [monitor:///home/.../.bash_history]
 sourcetype = bash_history
 index = osnixbash
-disabled = 0
+disabled = 0```
 
 REFS:
 - https://medium.com/@devopsprosiva/splunk-install-linux-universal-forwarder-3e115d51e751
