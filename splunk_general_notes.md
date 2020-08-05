@@ -6,6 +6,6 @@ NOTES:
 - It's best to always use both when possible to increase searching speed. 
 
 ### indexes
-1- logical separation of different types of data - e.g. if you're searching for linux logs, you don't need to search firewall logs, so you can specify index=linux.
-2- Role-based access restriction of data. Network guys don't need to see host logs, host guys don't need to see network logs.
-3 - Varying retention requirements. You may need to retain firewall logs for a year, but host logs for 3 months. Different indexes allow you to have different retention policies.
+- logical separation of different types of data - e.g. if you're searching for linux logs, you don't need to search firewall logs, so you can specify index=linux.
+- Role-based access restriction of data. Network guys don't need to see host logs, host guys don't need to see network logs.
+- Varying retention requirements. You may need to retain firewall logs for a year, but host logs for 3 months. Different indexes allow you to have different retention policies.
