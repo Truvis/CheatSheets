@@ -16,7 +16,7 @@ Add blacklist to not forward certain files
 - blacklist = pihole*
 - blacklist = access*
 
-### inputs.conf
+### inputs.conf - fine tuned for controlling indexs and sources when searching
 
 ```
 [monitor:///var/log]
