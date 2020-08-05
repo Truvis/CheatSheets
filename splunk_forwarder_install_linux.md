@@ -12,7 +12,7 @@
 - splunk restart
 
 ### dont foward files
-Add blacklist to not forward certain files. 
+Add blacklist to not forward certain files
 - blacklist = pihole*
 - blacklist = access*
 
