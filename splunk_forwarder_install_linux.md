@@ -11,6 +11,11 @@
 - ./splunk add forward-server host:9997
 - splunk restart
 
+### dont foward files
+Add blacklist to not forward certain files. 
+- blacklist = pihole*
+- blacklist = access*
+
 REFS:
 - https://medium.com/@devopsprosiva/splunk-install-linux-universal-forwarder-3e115d51e751
 - https://docs.splunk.com/Documentation/Splunk/8.0.5/AddASAsingle/InstallUF
