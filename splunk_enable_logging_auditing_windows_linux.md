@@ -10,6 +10,10 @@
 - Audit privilege use
 - Audit system events
 
+### tweaks:
+- auditpol /set /subcategory:”Filtering Platform Connection” /success:disable /failure:enable
+- host=* category="Filtering Platform Connection" --- can be a little loud in the background. 
+
 
 ### refs:
 - https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor
