@@ -34,3 +34,4 @@
 REFS:
 - https://serverfault.com/questions/727084/how-to-clear-or-stop-net-snmpd-log
 - https://serverfault.com/questions/310640/reduce-snmpd-logging-verbosity
+- https://support.auvik.com/hc/en-us/articles/206311526-How-to-enable-SNMP-on-a-VMware-ESXi-hypervisor
