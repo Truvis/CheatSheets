@@ -5,11 +5,11 @@
 - start service
 
 ### Linux
-- curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.9.0-linux-x86_64.tar.gz
-- tar xzvf filebeat-7.9.0-linux-x86_64.tar.gz
+- curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.9.0-x86_64.rpm
+- rpm -vi filebeat-7.9.0-x86_64.rpm
 - change localhost to IPs under winlogbeat.yml
-- ./filebeat modules enable auditd
-./filebeat setup -e
+- filebeat modules enable system
+- filebeat setup
 - start service
 
 
