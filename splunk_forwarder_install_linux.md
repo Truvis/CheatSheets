@@ -22,26 +22,26 @@ Add blacklist to not forward certain files
 [monitor:///var/log]
 whitelist=(log$|messages|mesg$|cron$|acpid$|\.out)
 blacklist=(\.gz$|\.zip$|\.bz2$|auth\.log|lastlog|secure|anaconda\.syslog)
-index=osnix
+index=linux
 sourcetype=syslog
 disabled = 0
 
 [monitor:///var/log/secure]
 blacklist=(\.gz$|\.zip$|\.bz2$)
-index=osnixsec
+index=linux
 sourcetype=syslog
 source=secure
 disabled = 0
 
 [monitor:///var/log/auth.log*]
 blacklist=(\.gz$|\.zip$|\.bz2$)
-index=osnixsec
+index=linux
 sourcetype=syslog
 disabled = 0
 
 [monitor:///root/.bash_history]
 sourcetype = bash_history
-index = osnixbash
+index=linux
 disabled = 0
 
 [monitor:///home/.../.bash_history]
