@@ -20,7 +20,7 @@
 - HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ModuleLogging \ModuleNames → * = *
 - HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging → EnableScriptBlockLogging = 1
 
-# REFS:
+## REFS:
 - http://blogs.msdn.com/b/powershell/archive/2016/01/19/windows-management-framework-wmf-4-0-update-now-available-for-windows-server-2012-windows-server-2008-r2-sp1-and-windows-7-sp1.aspx
 - http://blogs.msdn.com/b/powershell/archive/2015/06/09/powershell-the-blue-team.aspx
 - https://www.fireeye.com/content/dam/fireeye-www/global/en/solutions/pdfs/wp-lazanciyan-investigating-powershell-attacks.pdf
@@ -37,6 +37,17 @@ Audit Policies –> Local Policies –> Audit Policy
 - Audit Process Tracking - Success/Failure
 - Audit system events - Success/Failure
 
-# REFS
+## REFS
 - https://www.fireeye.com/blog/threat-research/2016/08/wmi_vs_wmi_monitor.html
 - https://github.com/realparisi/WMI_Monitor
+
+# SysMon
+## Setup
+- Sysmon Download – https://docs.microsoft.com/en-us/sysinternals/downloads/Sysmon
+- Sysmon config – https://github.com/SwiftOnSecurity/Sysmon-config
+- Sysmon.exe -i Sysmonconfig-export.xml -accepteula -h md5,sha256 -n -l
+- sc config Sysmon start= auto
+
+## REFS
+- https://silentbreaksecurity.com/windows-events-sysmon-elk/
+
