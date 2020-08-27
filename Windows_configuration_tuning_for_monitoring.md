@@ -27,3 +27,12 @@
 - https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html
 - https://blogs.msdn.microsoft.com/powershell/2016/02/24/windows-management-framework-wmf-5-0-rtm-packages-has-been-republished/
 - https://github.com/matthewdunwoody/block-parser
+
+# Audit Logging
+## Setup
+Audit Policies –> Local Policies –> Audit Policy
+- Audit Account logon events - Success/Failure
+- Audit Account Managament - Success/Failure
+- Audit logon events - Success/Failure
+- Audit Process Tracking - Success/Failure
+- Audit system events - Success/Failure
