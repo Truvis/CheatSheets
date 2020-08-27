@@ -1,4 +1,4 @@
-# Enable Power Shell
+# Enable Power Shell Logging
 ## pre-reqs
 ### Windows 7/8.1/2008/2012, upgrading PowerShell to enable enhanced logging in PowerShell 5.0 (recommended) requires:
 - .NET 4.5
@@ -13,3 +13,17 @@
 -- 8.1/2012 R2 – KB3000850
 -- 2012 – KB3119938
 -- 7/2008 R2 SP1 – KB3109118
+
+## Setup
+- Administrative Templates → Windows Components → Windows PowerShell
+- HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ModuleLogging → EnableModuleLogging = 1
+- HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ModuleLogging \ModuleNames → * = *
+- HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging → EnableScriptBlockLogging = 1
+
+# REFS:
+- http://blogs.msdn.com/b/powershell/archive/2016/01/19/windows-management-framework-wmf-4-0-update-now-available-for-windows-server-2012-windows-server-2008-r2-sp1-and-windows-7-sp1.aspx
+- http://blogs.msdn.com/b/powershell/archive/2015/06/09/powershell-the-blue-team.aspx
+- https://www.fireeye.com/content/dam/fireeye-www/global/en/solutions/pdfs/wp-lazanciyan-investigating-powershell-attacks.pdf
+- https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html
+- https://blogs.msdn.microsoft.com/powershell/2016/02/24/windows-management-framework-wmf-5-0-rtm-packages-has-been-republished/
+- https://github.com/matthewdunwoody/block-parser
