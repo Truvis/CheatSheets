@@ -36,3 +36,7 @@ Audit Policies –> Local Policies –> Audit Policy
 - Audit logon events - Success/Failure
 - Audit Process Tracking - Success/Failure
 - Audit system events - Success/Failure
+
+# REFS
+- https://www.fireeye.com/blog/threat-research/2016/08/wmi_vs_wmi_monitor.html
+- https://github.com/realparisi/WMI_Monitor
