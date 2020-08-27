@@ -26,3 +26,4 @@
 
 ### REFS
 - https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html
+- https://malware.news/t/monitoring-for-windows-event-logs-and-the-untold-story-of-proper-elk-integration/16816
