@@ -24,17 +24,17 @@
 
 # Collect Windows Filtering Platform (WFP) events in SEM
 ## Alert Name	Windows Event ID
-TCPTrafficAudit	5152, 5154, 5156, 5157, 5158, 5159
-IPTrafficAudit	5152, 5154, 5156, 5157, 5158, 5159
-UDPTrafficAudit	5152, 5154, 5156, 5157, 5158, 5159
-ICMPTrafficAudit	5152, 5156, 5157, 5158, 5159
-RoutingTrafficAudit	5152, 5156
-PPTPTrafficAudit	5152
+- TCPTrafficAudit	5152, 5154, 5156, 5157, 5158, 5159
+- IPTrafficAudit	5152, 5154, 5156, 5157, 5158, 5159
+- UDPTrafficAudit	5152, 5154, 5156, 5157, 5158, 5159
+- ICMPTrafficAudit	5152, 5156, 5157, 5158, 5159
+- RoutingTrafficAudit	5152, 5156
+- PPTPTrafficAudit	5152
 
 ## Event ID	Brief Description
-5152	Windows Filtering Platform blocked a packet
-5154	Windows Filtering Platform permitted an application or service to listen on a port for incoming connections
-5156	Windows Filtering Platform allowed a connection
-5157	Windows Filtering Platform blocked a connection
-5158	Windows Filtering Platform permitted a bind to a local port
-5159	Windows Filtering Platform blocked a bind to a local port
+- 5152	Windows Filtering Platform blocked a packet
+- 5154	Windows Filtering Platform permitted an application or service to listen on a port for incoming connections
+- 5156	Windows Filtering Platform allowed a connection
+- 5157	Windows Filtering Platform blocked a connection
+- 5158	Windows Filtering Platform permitted a bind to a local port
+- 5159	Windows Filtering Platform blocked a bind to a local port
