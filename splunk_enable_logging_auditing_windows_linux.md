@@ -10,7 +10,7 @@
 - Audit privilege use
 - Audit system events
 
-### tweaks:
+### tweaks: (free splunk lic space issues)
 - auditpol /set /subcategory:"Filtering Platform Packet Drop" /success:disable /failure:disable
 - auditpol /set /subcategory:"Filtering Platform Connection" /success:disable /failure:disable
 - host=* category="Filtering Platform Connection" --- can be a little loud in the background. 
