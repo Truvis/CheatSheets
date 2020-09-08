@@ -62,6 +62,15 @@
  
  #### Successful Logons – Windows
  - source="WinEventLog:security" EventCode=4624 Logon_Type IN (2,7,10,11) NOT user IN ("DWM-*", "UMFD-*") | eval Workstation_Name=lower(Workstation_Name) | eval host=lower(host) | eval hammer=_time  | bucket span=12h hammer  | stats values(Logon_Type) as "Logon Type" count sparkline by user host, hammer, Workstation_Name | rename hammer as "12 hour blocks" host as "Target Host" Workstation_Name as "Source Host" | convert ctime("12 hour blocks") | sort - "12 hour blocks"
+ 
+#### Overview query builders
+- index="suricata" sourcetype="suricata:alert" | stats count(signature) as COUNT by severity_id, severity, signature, src_ip, dest_ip, category, action | table severity, category, signature, src_ip, dest_ip, action, COUNT | sort severity_id desc'
+
+- index="suricata" sourcetype="suricata:dns" dns.answers{}.rrname="*" [ | inputlookup domains.csv  | rename bad_domain as dns.answers{}.rrname | fields dns.answers{}.rrname ] | table _time, src_ip, dns.answers{}.rrname | sort _time desc
+
+- index="suricata" sourcetype="suricata:alert" | stats values(*) AS * | transpose
+
+
 
 ### REFS:
 - https://docs.splunksecurityessentials.com/content-detail/sser_malicious_command_line_executions/ (contains good queries all around)
