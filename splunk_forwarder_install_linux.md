@@ -19,34 +19,37 @@ Add blacklist to not forward certain files
 ### inputs.conf - fine tuned for controlling indexs and sources when searching
 
 ```
-[monitor:///var/log]
-whitelist=(log$|messages|mesg$|cron$|acpid$|\.out)
-blacklist=(\.gz$|\.zip$|\.bz2$|auth\.log|lastlog|secure|anaconda\.syslog)
-index=linux
-sourcetype=syslog
-disabled = 0
-
 [monitor:///var/log/secure]
-blacklist=(\.gz$|\.zip$|\.bz2$)
-index=linux
-sourcetype=syslog
-source=secure
+sourcetype = linux_secure
+source = secure
 disabled = 0
 
-[monitor:///var/log/auth.log*]
-blacklist=(\.gz$|\.zip$|\.bz2$)
-index=linux
-sourcetype=syslog
+[monitor:///var/log/messages]
 disabled = 0
+source = messages
+sourcetype = syslog
 
 [monitor:///root/.bash_history]
-sourcetype = bash_history
-index=linux
+source = bash_history
+sourcetype = syslog
 disabled = 0
 
 [monitor:///home/.../.bash_history]
-sourcetype = bash_history
-index = osnixbash
+source = bash_history
+sourcetype = syslog
+disabled = 0
+
+[monitor:///var/log/auth.log*]
+blacklist = (\.gz$|\.zip$|\.bz2$)
+source = auth
+sourcetype = syslog
+disabled = 0
+
+[monitor:///var/log]
+whitelist = (log$|messages|mesg$|cron$|acpid$|\.out)
+blacklist = (\.gz$|\.zip$|\.bz2$|auth\.log|lastlog|secure|anaconda\.syslog)
+source = linux_logs
+sourcetype = syslog
 disabled = 0
 ```
 
