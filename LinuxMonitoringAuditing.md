@@ -1,3 +1,10 @@
+# History
+
+Add to .bashrc to instantly dump commands including ones with spaces. Allows for better audit and security
+
+- PROMPT_COMMAND='history -a'
+- export HISTCONTROL=
+
 # Syslog
 
 ## LogRotate
