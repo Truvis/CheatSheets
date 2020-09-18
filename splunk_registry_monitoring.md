@@ -328,3 +328,6 @@ hive=\\REGISTRY\\USER\\.*\\Software\\WinRAR\\?.*
 - https://www.malwarearchaeology.com/s/Windows-Registry-Auditing-Cheat-Sheet-ver-Aug-2019.pdf
 - https://static1.squarespace.com/static/552092d5e4b0661088167e5c/t/5a3187b4419202f0fb8b2dd1/1513195444728/Windows+Splunk+Logging+Cheat+Sheet+v2.2.pdf
 - https://lolbas-project.github.io/
+- https://www.hurricanelabs.com/splunk-tutorials/windows-event-log-filtering-design-in-splunk
+- https://community.splunk.com/t5/Getting-Data-In/Monitoring-specific-keys-in-the-registry/td-p/338565
+- https://docs.splunk.com/Documentation/Splunk/8.0.6/Data/MonitorWindowshostinformation
