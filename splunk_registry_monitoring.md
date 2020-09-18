@@ -333,3 +333,6 @@ hive=\\REGISTRY\\USER\\.*\\Software\\WinRAR\\?.*
 - https://docs.splunk.com/Documentation/Splunk/8.0.6/Data/MonitorWindowshostinformation
 - https://resources.infosecinstitute.com/common-malware-persistence-mechanisms/#:~:text=These%20are%20located%20at%3A,Microsoft%5CWindows%5CCurrentVersion%5CRunServices
 - https://attack.mitre.org/techniques/T1547/001/
+- https://www.andreafortuna.org/2017/07/06/malware-persistence-techniques/
+- https://pentestlab.blog/2019/10/01/persistence-registry-run-keys/
+- https://www.tripwire.com/state-of-security/mitre-framework/evade-detection-hiding-registry/
