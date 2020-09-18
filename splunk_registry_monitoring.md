@@ -336,3 +336,6 @@ hive=\\REGISTRY\\USER\\.*\\Software\\WinRAR\\?.*
 - https://www.andreafortuna.org/2017/07/06/malware-persistence-techniques/
 - https://pentestlab.blog/2019/10/01/persistence-registry-run-keys/
 - https://www.tripwire.com/state-of-security/mitre-framework/evade-detection-hiding-registry/
+- https://medium.com/@hannahsuarez/list-of-hkey-windows-registry-keys-and-subkeys-to-audit-based-on-mitre-att-ck-and-more-1cde169a6fcd
+- https://www.sans.org/security-resources/posters/dfir/windows-forensics-evidence-of-75
+- https://www.sans.org/security-resources/posters/dfir/windows-forensic-analysis-170
