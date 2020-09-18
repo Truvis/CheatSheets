@@ -338,4 +338,5 @@ hive=\\REGISTRY\\USER\\.*\\Software\\WinRAR\\?.*
 - https://www.tripwire.com/state-of-security/mitre-framework/evade-detection-hiding-registry/
 - https://medium.com/@hannahsuarez/list-of-hkey-windows-registry-keys-and-subkeys-to-audit-based-on-mitre-att-ck-and-more-1cde169a6fcd
 - https://www.sans.org/security-resources/posters/dfir/windows-forensics-evidence-of-75
-- https://www.sans.org/security-resources/posters/dfir/windows-forensic-analysis-170
+- https://www.sans.org/security-resources/posters/windows-forensic-analysis/170/download
+- https://www.jaiminton.com/cheatsheet/DFIR/#t1038-dll-search-order-hijacking
