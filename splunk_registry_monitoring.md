@@ -331,3 +331,5 @@ hive=\\REGISTRY\\USER\\.*\\Software\\WinRAR\\?.*
 - https://www.hurricanelabs.com/splunk-tutorials/windows-event-log-filtering-design-in-splunk
 - https://community.splunk.com/t5/Getting-Data-In/Monitoring-specific-keys-in-the-registry/td-p/338565
 - https://docs.splunk.com/Documentation/Splunk/8.0.6/Data/MonitorWindowshostinformation
+- https://resources.infosecinstitute.com/common-malware-persistence-mechanisms/#:~:text=These%20are%20located%20at%3A,Microsoft%5CWindows%5CCurrentVersion%5CRunServices
+- https://attack.mitre.org/techniques/T1547/001/
