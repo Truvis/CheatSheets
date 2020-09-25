@@ -100,4 +100,5 @@ All TLS handshakes make use of asymmetric encryption (the public and private key
 - https://blog.ivanristic.com/SSL_Threat_Model.png
 - https://www.altaro.com/hyper-v/public-key-infrastructure/
 - https://www.thesslstore.com/blog/cipher-suites-algorithms-security-settings/
+- https://www.garykessler.net/library/crypto.html
 
