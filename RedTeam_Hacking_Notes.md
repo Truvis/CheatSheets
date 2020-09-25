@@ -50,3 +50,33 @@ Encoding is when you transform between a logical representation of a text ("logi
 - https://research.cs.wisc.edu/mist/SoftwareSecurityCourse/Chapters/3_8_4-XML-Injections.pdf
 
 
+#### Explain how cookie based authentication works
+##### Notes
+##### Refs
+- https://edward-huang.com/authentication/tech/2019/09/10/all-you-need-to-know-about-authentication-is-here/
+- https://swagger.io/docs/specification/authentication/cookie-authentication/
+- https://www.yegor256.com/2015/05/18/cookie-based-authentication.html
+- https://auth0.com/docs/sessions-and-cookies/spa-authenticate-with-cookies 
+
+
+#### Explain how a Java MVC web framework works.
+##### Notes
+##### Refs
+- https://javarevisited.blogspot.com/2017/06/how-spring-mvc-framework-works-web-flow.html#:~:text=xml%20and%20finds%20the%20Servlet,MVC%20based%20Java%20web%20application.
+- https://www.tutorialspoint.com/spring/spring_web_mvc_framework.htm
+- https://stackify.com/spring-mvc/
+
+
+#### Header
+##### Notes
+##### Refs
+
+
+#### Header
+##### Notes
+##### Refs
+
+
+#### Header
+##### Notes
+##### Refs
