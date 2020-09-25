@@ -250,3 +250,5 @@ This type of attack can you to intercept packets and information like images for
 ##### Refs
 - https://www.triaxiomsecurity.com/2019/03/20/vulnerability-walkthrough-nbns-and-llmnr-spoofing/
 - https://www.4armed.com/blog/llmnr-nbtns-poisoning-using-responder/
+
+
