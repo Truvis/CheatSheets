@@ -252,3 +252,13 @@ This type of attack can you to intercept packets and information like images for
 - https://www.4armed.com/blog/llmnr-nbtns-poisoning-using-responder/
 
 
+#### ARP Spoofing
+##### Notes
+- Denial-of-service attacks: DoS attacks often leverage ARP spoofing to link multiple IP addresses with a single target’s MAC address. As a result, traffic that is intended for many different IP addresses will be redirected to the target’s MAC address, overloading the target with traffic.
+- Session hijacking: Session hijacking attacks can use ARP spoofing to steal session IDs, granting attackers access to private systems and data.
+- Man-in-the-middle attacks: MITM attacks can rely on ARP spoofing to intercept and modify traffic between victims.
+
+##### Refs
+- https://www.veracode.com/security/arp-spoofing
+- https://lifars.com/wp-content/uploads/2020/02/case-study-NAC-Bypass-and-ARP-Spoofing.pdf
+- 
