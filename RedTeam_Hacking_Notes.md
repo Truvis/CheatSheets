@@ -154,3 +154,62 @@ A Silver Ticket is a forged service authentication ticket. A hacker can create a
 - https://www.qomplx.com/qomplx-knowledge-silver-ticket-attacks-explained/
 - https://resources.infosecinstitute.com/active-directory-series-silver-ticket/
 - https://en.hackndo.com/kerberos-silver-golden-tickets/ 
+
+
+
+#### Describe what SEH is and how you exploit it?
+##### Notes
+Structured Exception Handling (SEH) is a Windows mechanism for handling both hardware and software exceptions consistently. The concept is quite simple — try to execute a block of code and if an error/exception occurs, do whatever the “except” block (aka the exception handler) says
+
+##### Refs
+- https://www.securitysift.com/windows-exploit-development-part-6-seh-exploits/#:~:text=Structured%20Exception%20Handling%20(SEH)%20is,hardware%20and%20software%20exceptions%20consistently.&text=The%20concept%20is%20quite%20simple,aka%20the%20exception%20handler)%20says.
+- https://www.exploit-db.com/docs/english/17505-structured-exception-handler-exploitation.pdf
+- https://resources.infosecinstitute.com/seh-exploit/
+
+
+#### Describe what SQL Injection is and how you would test for it?
+##### Notes
+SQL Injection (SQLi) is a type of an injection attack that makes it possible to execute malicious SQL statements. These statements control a database server behind a web application. ... They can go around authentication and authorization of a web page or web application and retrieve the content of the entire SQL database.
+
+##### Refs
+- https://www.acunetix.com/websitesecurity/sql-injection/#:~:text=SQL%20Injection%20(SQLi)%20is%20a,server%20behind%20a%20web%20application.&text=They%20can%20go%20around%20authentication,of%20the%20entire%20SQL%20database.
+- https://portswigger.net/web-security/sql-injection
+- https://owasp.org/www-community/attacks/SQL_Injection
+- https://www.rapid7.com/fundamentals/sql-injection-attacks/
+
+
+#### What about Blind SQL Injection and how is it different from other kinds? 
+##### Notes
+Blind SQL injection is nearly identical to normal SQL Injection, the only difference being the way the data is retrieved from the database. When the database does not output data to the web page, an attacker is forced to steal data by asking the database a series of true or false questions. This makes exploiting the SQL Injection vulnerability more difficult, but not impossible. .
+
+##### Refs
+- https://owasp.org/www-community/attacks/Blind_SQL_Injection#:~:text=Blind%20SQL%20injection%20is%20nearly,of%20true%20or%20false%20questions.
+- https://portswigger.net/web-security/sql-injection/blind
+- https://linuxhint.com/blind_sql_injection_tutorial/
+
+
+#### How can you execute OS command with (m(y/s))sql injection?
+##### Notes
+Normally done by having SQL query write a file to the system that can then be accessed.
+
+##### Refs
+- https://portswigger.net/web-security/os-command-injection
+- https://null-byte.wonderhowto.com/how-to/use-sql-injection-run-os-commands-get-shell-0191405/
+- https://sqlwiki.netspi.com/attackQueries/executingOSCommands/#mysql
+- https://kalitut.com/how-to-use-sql-injections-to-get-shell/
+- https://www.acunetix.com/blog/web-security-zone/os-command-injection/
+- http://www.red-database-security.com/tutorial/run_os_commands_via_webapp.html
+
+
+##### Describe a webshell and how you would upload/use one. How would you bypass uploader protections? 
+#### Notes
+You can change encoding from UTF-8 with 1 byte to UFT-16 and get 2 byte so the extra byte of padding allows bypassing.
+
+#### Refs
+- https://www.exploit-db.com/docs/english/45074-file-upload-restrictions-bypass.pdf
+- https://pentestlab.blog/2012/11/29/bypassing-file-upload-restrictions/
+- https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload
+- https://null-byte.wonderhowto.com/how-to/beat-file-upload-restrictions-web-apps-get-shell-0323454/
+- https://thibaud-robin.fr/articles/bypass-filter-upload/
+- https://thehacktoday.com/bypass-file-upload-restrictions-on-web-apps-to-pop-a-shell/
+- https://www.hackingarticles.in/comprehensive-guide-on-unrestricted-file-upload/
