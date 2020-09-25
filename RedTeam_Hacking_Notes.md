@@ -124,6 +124,33 @@ Kerberoasting is a technique which exploits a weakness in the Kerberos protocol 
 ##### Notes
 A Golden Ticket attack is a type of attack in which an adversary gains control over an Active Directory Key Distribution Service Account (KRBTGT), and uses that account to forge valid Kerberos Ticket Granting Tickets (TGTs).
 
+Whatever the circumstances, once an attacker has a foothold on a network, they can start laying the groundwork for a Golden Ticket Attack. This involves:
+
+- Reconnaissance to gather information about the domain, such as the domain name and domain security identifier (SID), both of which are relatively easily obtained by a whoami command on Windows.
+- Acquisition of local administrator-level access to the domain controller in order to steal an NTLM hash of the Key Distribution Service account (KRBTGT). An attacker may -obtain access to the Domain Controller, and then run a tool such as Mimikatz to harvest the credential. Optionally, attackers might use other password-grabbing attacks such as Pass-the-Hash or DC Sync to obtain the KRBTGT password hash from the domain controller without first authenticating to it.
+- With the password hash for the Key Distribution Service account, the Golden Ticket Attack can be launched. Mimikatz creates a relative ID (RID) in Active Directory, supplies an account username for impersonation, and ultimately, obtains a Kerberos Ticket Granting Ticket (TGT), which gives the threat actor access to the domain controller as a domain administrator. These privileges allow the attacker access to any domain, group, or resource on the network.
+- An attacker can set the ticket to be valid for any time period, up to 10 years (tickets are generally valid only for a few hours) granting them indefinite persistence as a legitimate user with a valid ticket that is virtually undetectable because it does not appear to be malicious traffic. However, sophisticated attackers with “Golden Ticket” access may choose not to employ extended validation periods so as to avoid detection.
+
 ##### Refs
 - https://www.qomplx.com/qomplx-knowledge-golden-ticket-attacks-explained/#:~:text=A%20Golden%20Ticket%20attack%20is,Ticket%20Granting%20Tickets%20(TGTs).
-- 
+- https://resources.infosecinstitute.com/active-directory-walkthrough-series-golden-ticket/
+- https://en.hackndo.com/kerberos-silver-golden-tickets/
+
+
+#### What is a silver ticket?
+##### Notes
+A Silver Ticket is a forged service authentication ticket. A hacker can create a Silver Ticket by cracking a computer account password and using that to create a fake authentication ticket. ... In the simplest terms, a Silver Ticket is a forged authentication ticket that allows you to log into some accounts
+
+- Conduct reconnaissance to gather information about the domain, such as the domain name and domain security identifier (SID), both of which are relatively easily obtained by a whoami command on Windows.
+- Obtain the DNS name under which the service principal name (SPN) for the targeted, local service they wish to attack is registered as well as the service type.
+- Use Mimikatz or a similar tool to obtain the local NTLM password (or password hash) for the Kerberos service running on the compromised system, for example: Windows file share, SQL, email, Microsoft Sharepoint and so on. Service password hashes can be obtained from a number of sources on a compromised local system. For example, they can be dumped from the local computer’s Security Account Manager (SAM) or local service account.
+- Obtain the unencrypted password for the service. These can be obtained from the hash using methods like offline cracking (“Kerberoasting”) to obtain the unencrypted password data.
+- Use Mimikatz or a similar tool to forge a Kerberos Ticket Granting Service (TGS) ticket allowing the attacker to authenticate to the targeted service.
+- Authenticate to the local service directly using the credentials and forged TGS.
+- Manipulate the TGS to elevate the attacker’s permissions to that of Domain Administrator.
+
+##### Refs
+- https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/kerberos-silver-tickets
+- https://www.qomplx.com/qomplx-knowledge-silver-ticket-attacks-explained/
+- https://resources.infosecinstitute.com/active-directory-series-silver-ticket/
+- https://en.hackndo.com/kerberos-silver-golden-tickets/ 
