@@ -102,3 +102,28 @@ All TLS handshakes make use of asymmetric encryption (the public and private key
 - https://www.thesslstore.com/blog/cipher-suites-algorithms-security-settings/
 - https://www.garykessler.net/library/crypto.html
 
+#### What is kerberoasting?
+##### Notes
+Kerberoasting is a technique which exploits a weakness in the Kerberos protocol when requesting access to a service. 
+
+- The user authenticates with the Key Distribution Centre (the Domain Controller in this case) using an AS-REQ packet.
+- The KDC validates the user credentials and if valid, returns a Ticket Granting Ticket (TGT).
+- When the user wants to authenticate to a service such as IIS, a request is made to the Ticket Granting Service (TGS) containing the TGT and the Service Principal Name (SPN) of the service to be accessed.
+- If the TGT is valid and has not expired, a TGS creates a service ticket for the target service. The service ticket is encrypted with the credentials of the service account.
+- A TGS response is sent to the user with the encrypted service ticket.
+- The service ticket is finally forwarded to the service, which is decrypted by the using the service account credentials.
+
+##### Refs
+- https://www.qomplx.com/qomplx-knowledge-kerberoasting-attacks-explained/
+- https://blog.xpnsec.com/kerberos-attacks-part-1/
+- https://www.blackhillsinfosec.com/a-toast-to-kerberoast/
+- https://www.hackingarticles.in/deep-dive-into-kerberoasting-attack/
+
+
+#### What is a golden ticket? 
+##### Notes
+A Golden Ticket attack is a type of attack in which an adversary gains control over an Active Directory Key Distribution Service Account (KRBTGT), and uses that account to forge valid Kerberos Ticket Granting Tickets (TGTs).
+
+##### Refs
+- https://www.qomplx.com/qomplx-knowledge-golden-ticket-attacks-explained/#:~:text=A%20Golden%20Ticket%20attack%20is,Ticket%20Granting%20Tickets%20(TGTs).
+- 
