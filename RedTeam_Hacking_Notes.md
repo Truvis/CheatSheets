@@ -201,11 +201,11 @@ Normally done by having SQL query write a file to the system that can then be ac
 - http://www.red-database-security.com/tutorial/run_os_commands_via_webapp.html
 
 
-##### Describe a webshell and how you would upload/use one. How would you bypass uploader protections? 
-#### Notes
+#### Describe a webshell and how you would upload/use one. How would you bypass uploader protections? 
+##### Notes
 You can change encoding from UTF-8 with 1 byte to UFT-16 and get 2 byte so the extra byte of padding allows bypassing.
 
-#### Refs
+##### Refs
 - https://www.exploit-db.com/docs/english/45074-file-upload-restrictions-bypass.pdf
 - https://pentestlab.blog/2012/11/29/bypassing-file-upload-restrictions/
 - https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload
@@ -213,3 +213,40 @@ You can change encoding from UTF-8 with 1 byte to UFT-16 and get 2 byte so the e
 - https://thibaud-robin.fr/articles/bypass-filter-upload/
 - https://thehacktoday.com/bypass-file-upload-restrictions-on-web-apps-to-pop-a-shell/
 - https://www.hackingarticles.in/comprehensive-guide-on-unrestricted-file-upload/
+
+
+#### What kind of attack is ARP Spoofing considered and how could you leverage it on a penetration test?
+##### Notes
+ARP spoofing is a type of attack in which a malicious actor sends falsified ARP (Address Resolution Protocol) messages over a local area network. This results in the linking of an attacker’s MAC address with the IP address of a legitimate computer or server on the network.
+
+This type of attack can you to intercept packets and information like images for example and see what the target is viewing
+##### Refs
+- https://www.hackingloops.com/penetration-testing-of-men-in-middle-attacks-using-arp-spoofing/
+- https://pen-testing.sans.org/resources/papers/gcih/real-world-arp-spoofing-105411
+
+
+#### NAMP
+##### Avoid Firewall Notes
+- Can be use to send decoys so its hard to determine where a scan originated from. (-D)
+- Can send fragmented packets as a way to bypass firewall packet inspection (-f)
+- Idle Zombie Scan allows you to use another host on the network that is idle in order to perform a port scan to another host.The main advantage of this method is that it very stealthy because the firewall log files will record the IP address of the Zombie and not our IP.However in order to have proper results we must found hosts that are idle on the network. (-sI [Zombie IP] [Target IP])
+- Setting a source port can allow firewall bypassing. A common error that many administrators are doing when configuring firewalls is to set up a rule to allow all incoming traffic that comes from a specific port number.The –source-port option of Nmap can be used to exploit this misconfiguration.Common ports that you can use for this type of scan are: 20,53 and 67 (–source-port 53 scanme.nmap.org)
+- Add random data. Many firewalls are inspecting packets by looking at their size in order to identify a potential port scan. This is because many scanners are sending packets that have specific size.In order to avoid that kind of detection you can use the command –data-length to add additional data and to send packets with different size than the default. (–data-length 25 192.168.1.50)
+- Spoofing the MAC address of your host.This technique can be very effective especially if there is a MAC filtering rule to allow only traffic from certain MAC addresses so you will need to discover which MAC address you need to set in order to obtain results. (-sT -Pn –spoof-mac Dell 192.168.1.50)
+- Checksums are used by the TCP/IP protocol to ensure the data integrity. However sending packets with incorrect checksums can help you to discover information from systems that is not properly configured or when you are trying to avoid a firewall. (–badsum 192.168.1.50)
+
+##### Refs
+- https://teckk2.github.io/misc/2018/01/10/Infosec-Interview_Questions_Part-2.html
+
+
+#### LLMNR  / Responder / MultiRelay
+##### Notes
+
+- Responder:
+--- First, it will listen to multicast NR queries (LLMNR – UDP/5355, NBT-NS – UDP/137) and, under the right conditions, spoof a response – directing the victim to the machine on which it is running.
+--- Once a victim will try and connect to our machine, Responder will exploit the connection to steal credentials and other data.
+- MultiRelay relay the authentication packet ti a different machine to get privileged access to it.
+
+##### Refs
+- https://www.triaxiomsecurity.com/2019/03/20/vulnerability-walkthrough-nbns-and-llmnr-spoofing/
+- https://www.4armed.com/blog/llmnr-nbtns-poisoning-using-responder/
