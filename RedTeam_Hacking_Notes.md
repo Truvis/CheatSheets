@@ -242,10 +242,10 @@ This type of attack can you to intercept packets and information like images for
 #### LLMNR  / Responder / MultiRelay
 ##### Notes
 
-- Responder:
---- First, it will listen to multicast NR queries (LLMNR – UDP/5355, NBT-NS – UDP/137) and, under the right conditions, spoof a response – directing the victim to the machine on which it is running.
---- Once a victim will try and connect to our machine, Responder will exploit the connection to steal credentials and other data.
-- MultiRelay relay the authentication packet ti a different machine to get privileged access to it.
+* Responder:
+ - First, it will listen to multicast NR queries (LLMNR – UDP/5355, NBT-NS – UDP/137) and, under the right conditions, spoof a response – directing the victim to the machine on which it is running.
+ - Once a victim will try and connect to our machine, Responder will exploit the connection to steal credentials and other data.
+* MultiRelay relay the authentication packet ti a different machine to get privileged access to it.
 
 ##### Refs
 - https://www.triaxiomsecurity.com/2019/03/20/vulnerability-walkthrough-nbns-and-llmnr-spoofing/
