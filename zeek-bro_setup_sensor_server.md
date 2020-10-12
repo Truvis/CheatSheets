@@ -104,8 +104,54 @@ crontab -e
 >>> */5 * * * * /opt/zeek/bin/zeekctl cron
 ```
 
-## CONFIGURE
+## CONFIGURE // PACKAGE INSTALLS
 
+```
+yum install git
+yum install python3-pip
+su zeek
+cd ~
+pip3 install zkg --user
+zeekctl stop
+zkg install zeek/j-gras/zeek-af_packet-plugin
+zkg install zeek/j-gras/add-interfaces
+zkg install zeek/salesforce/ja3
+zkg install zeek/salesforce/hassh
+```
 
+### AF_PACKET
+```
+vim /opt/zeek/etc/node.cfg
+>>> [worker-#]
+>>> [type=worker
+>>> [host=localhost
+>>> [interface=af_packet::<INTF>
+setcap cap_net_raw=eip /opt/zeek/bin/zeek
+setcap cap_net_raw=eip /opt/zeek/bin/capstats
+```
 
+### add-interfaces
+- modify const enable_all_logs and const include_logs: set[Log::ID]
+```
+vim /opt/zeek/share/zeek/site/add-interfaces/add-interfaces.bro
+export {
+        ## Enables interfaces for all active streams
+        const enable_all_logs = T &redef;
+        ## Streams not to add interfaces for
+        const exclude_logs: set[Log::ID] = { } &redef;
+        ## Streams to add interfaces for
+        const include_logs: set[Log::ID] = { } &redef;
+}
+```
 
+### LOAD PACKAGES
+- add to the end
+```
+vim /opt/zeek/share/zeek/site/local.zeek
+>>> @load packages
+```
+
+### FINISH
+```
+zeekctl deploy
+```
