@@ -1,6 +1,7 @@
 This was done using CentOS 8 base install. 
 
 # CentOS 8
+## INSTALL
 ### ENABLE “NETWORK” SERVICE AND DISABLE NIC OFFLOADING FUNCTIONS & SET SNIFFING NETWORK INTERFACES TO PROMISCUOUS MODE
 ```
 yum install network-scripts
@@ -25,7 +26,7 @@ systemctl start promisc.service
 systemctl enable promisc.service\
 ip a show enp2s0 | grep -i promisc
 ```
-## INSTALL ZEEK DEPENDENCIES GEO IP UPDATE
+### INSTALL ZEEK DEPENDENCIES GEO IP UPDATE
 - As root/sudo, edit /etc/yum.repos.d/CentOS-PowerTools.repo and set the “enabled” field to 1, to add the PowerTools repositor
 ```
 yum --enablerepo=extras install epel-release
@@ -35,7 +36,7 @@ yum install libmaxminddb-devel
 ```
 - Create MaxMind Account and then download and extract the GeoIP Database to  /usr/share/GeoIP/GeoLite2-City.mmdb
 
-## CREATE THE ZEEK USER AND DIRECTORY TO INSTALL/RUN
+### CREATE THE ZEEK USER AND DIRECTORY TO INSTALL/RUN
 ```
 groupadd zeek
 useradd zeek -g zeek
@@ -45,7 +46,7 @@ chown -R zeek:zeek /opt/zeek
 chmod 750 /opt/zeek
 ```
 
-## DOWNLOAD, COMPILE, AND INSTALL ZEEK
+### DOWNLOAD, COMPILE, AND INSTALL ZEEK
 (compile time will take awhile)
 ```
 su zeek
@@ -102,5 +103,9 @@ zeekctl status
 crontab -e
 >>> */5 * * * * /opt/zeek/bin/zeekctl cron
 ```
+
+## CONFIGURE
+
+
 
 
