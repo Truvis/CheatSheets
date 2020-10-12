@@ -204,14 +204,14 @@ index="suricata" sourcetype="suricata:alert"
 | transpose
 ```
 
-### ZEEK BASED
-#### CONNECTIONS TO DESTINATION PORTS ABOVE 1024
+## ZEEK
+### CONNECTIONS TO DESTINATION PORTS ABOVE 1024
 ```
 index=zeek sourcetype=zeek_conn id.resp_p>1024 
 | chart count over service by id.resp_p
 ```
 
-#### TOP 10 SOURCES BY NUMBER OF CONNECTIONS
+### TOP 10 SOURCES BY NUMBER OF CONNECTIONS
 ```
 index=zeek sourcetype=zeek_conn 
 | top id.orig_h 
