@@ -33,8 +33,8 @@
 - Talos Reputation Lookup: Presents historical reputation data about the website - https://talosintelligence.com/
 - Trend Micro Site Safety Center: Presents historical reputation data about the website - https://global.sitesafety.trendmicro.com/
 - Unmask Parasites: Looks up the URL in the Google Safe Browsing database - http://www.unmaskparasites.com/security-report/
-- urlscan.io: Examines the URL in real time and displays the requests it issues to render the page - http://urlvoid.com/ - http://www.ipvoid.com/
-- URLVoid and IPVoid: Looks up the URL or IP in several blacklisting services - https://www.virustotal.com/
+- urlscan.io: Examines the URL in real time and displays the requests it issues to render the page - http://urlscan.io/
+- URLVoid and IPVoid: Looks up the URL or IP in several blacklisting services - - http://urlvoid.com/ - http://www.ipvoid.com/
 - VirusTotal: Looks up the URL in several databases of malicious sites - https://www.virustotal.com/
 - ThreatMiner: Presents diverse threat intelligence data - https://www.threatminer.org/
 - WebPulse Site Review: Looks up the website in BlueCoat’s database - https://sitereview.bluecoat.com/
